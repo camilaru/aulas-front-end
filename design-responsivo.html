@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Responsivo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*  Etapa 1: regras de uso geralm ou seja regras que vão definir o site como um todo (independente das telas) */
+        body {
+            background-color: lightblue;
+            font-family: 'Segoe UI', Verdana, sans-serif;
+
+        }
+
+        h1 {
+            font-size: 40px;
+            color: blue;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: darkblue;
+        }
+
+        b {
+            background-color: azure;
+            padding: 2px;
+            border-radius: 4px;
+        }
+
+        p {
+            font-size: 15px;
+
+        }
+
+        /*  Etapa 2: Regras de uso condicional, ou seja, são configurações que somente entrarão em funcionamento se um ou mais requisitos forem atendidos (MEDIA QUERIES) */
+
+        @media screen and (min-width:534px) {
+            p {
+                font-size: 22px;
+            }
+
+            hr {
+                height: 3px;
+                background-color: rgb(31, 21, 163);
+            }
+        }
+
+        @media screen and (min-width: 611px) {
+            body {
+                background-color: rgb(162, 187, 187);
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            b {
+                font-style: italic;
+            }
+        }
+
+        /* Crie uma regra condicional em que, quando a página chegar em uma tela de pelo menos 764px as seguintes mudanças aconteça,: 
+        -plano de fundo da página se torne um gradiente 
+        -Título aumentente para letra maiúsculas (se torne necessário, mude a cor de texto também)
+        -parágrafos aumentem para 25px com altura de linha de 32px, e alinhamento á direita.
+        negritos com bordas e sombra.
+        */
+
+        @media screen and (min-width:764px) {
+            body {
+                background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            h1 {
+                text-transform: uppercase;
+                color: blueviolet;
+                background-color: #73da95;
+            }
+
+            p {
+                font-size: 25px;
+                line-height: 32px;
+                text-align: right;
+                border: 0 0 10 black;
+                text-shadow: 0 0 10 black;
+            }
+
+            b {
+                border: solid 0.2px black;
+                text-shadow: 0 0 10px black;
+            }
+
+        }
+
+        /* Chave de fechamento da tad @media */
+    </style>
+
+
+</head>
+
+<body>
+    <div id="exemplo">
+        <h1>Design Responsivo (ou responsividade)</h1>
+        <hr>
+        <p>Conjunto de técnicas de desenvolvimento front-end visando a construção de sites que funcionem corretamente em
+            dispositivos com telas de tamanhos variados.</p>
+
+        <p>Existem 2 abordagens de desenvolvimento: <b>Mobile First</b> e <b>Desktop First</b>.</p>
+
+        <p>A mais utilizada é a <b>Mobile First</b>.</p>
+    </div>
+</body>
+
+</html>
